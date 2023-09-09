@@ -22,8 +22,8 @@ const currentDayofTheWeek = daysOfTheWeek[currentDay]
 
 const UTCTime = (today.toISOString()).slice(0, 19) + 'Z'
 
-app.get('/api/:slack_name/:track', (req, res) => {
-    const {slack_name, track} = req.params
+app.get('/api', (req, res) => {
+        const {slack_name, track} = req.query
     try {
         if (slack_name === 'Hardarmyyy' && track === 'backend') {
             res.status(200).json({
