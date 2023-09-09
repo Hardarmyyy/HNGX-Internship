@@ -20,20 +20,34 @@ const currentDay = today.getDay()
 
 const currentDayofTheWeek = daysOfTheWeek[currentDay]
 
-const UTCTime = today.toISOString()
-console.log(UTCTime)
+const UTCTime = (today.toISOString()).slice(0, 19) + 'Z'
 
-app.get('/api', (req, res) => {
-    res.status(200).json({
-        "slack_name": "Hardarmyyy",
-        "current_day": currentDayofTheWeek,
-        "utc_time": UTCTime,
-        "github_file_url": "",
-        "github_repo_url": "https://github.com/Hardarmyyy/HNGX-Internship",
-        "status_code": 200,
-    })
+app.get('/api/:slack_name/:track', (req, res) => {
+    const {slack_name, track} = req.params
+    try {
+        if (slack_name === 'Hardarmyyy' && track === 'backend') {
+            res.status(200).json({
+                "slack_name": "Hardarmyyy",
+                "current_day": currentDayofTheWeek,
+                "utc_time": UTCTime,
+                "track": "backend",
+                "github_file_url": "https://github.com/Hardarmyyy/HNGX-Internship/blob/main/BACK-END/Stage-One/index.js",
+                "github_repo_url": "https://github.com/Hardarmyyy/HNGX-Internship/tree/main/BACK-END/Stage-One",
+                "status_code": 200,
+            })
+        }
+        else {
+            res.status(404).send({message: 'The username or track is invalid'})
+        }
+    }
+    catch (error) {
+        res.status(500).send({message: error.message})
+    }
 })
 
 app.listen(process.env.PORT, () => {
     console.log('server is listening and running on port', process.env.PORT)
 })
+
+// Export the Express API for vercel build up process
+module.exports = app;
