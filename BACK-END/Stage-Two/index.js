@@ -6,7 +6,7 @@ const app = express()
 const userRoutes = require('./routes/userRoutes')
 
 //connect to database
-mongoose.connect(process.env.MONGO_URI, {useUnifiedTopology: true, useNewUrlParser: true})  
+mongoose.connect(process.env.MONGODB_URI, {useUnifiedTopology: true, useNewUrlParser: true})  
 .then(() => {
 
     // Middlewares
@@ -17,11 +17,7 @@ mongoose.connect(process.env.MONGO_URI, {useUnifiedTopology: true, useNewUrlPars
         next()
     })
 
-    // app.use('/api', userRoutes)
-
-    app.get('/api', (req, res, next) => {
-        res.status(200).json({message: 'I want to perform crud operations'})
-    })
+    app.use('/api', userRoutes)
 
     //listen for requests
     app.listen(process.env.PORT, () => {
