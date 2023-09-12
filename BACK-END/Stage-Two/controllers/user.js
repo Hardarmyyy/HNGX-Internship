@@ -42,6 +42,10 @@ exports.getUser = async (req, res, next) => {
 
 }
 
+exports.test = async (req, res, next) => {
+    res.send({message: 'Hello world'})
+}
+
 exports.updateUser = async (req, res, next) => {
         const {user_id} = req.params
 
