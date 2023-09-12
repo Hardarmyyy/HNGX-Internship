@@ -6,9 +6,6 @@ const userSchema = new Schema({
     name: {
         type: String,
         required: true
-    },
-    track: {
-        type: String
     }
 }, {timestamps: {createdAt: true, updatedAt: true} })
 

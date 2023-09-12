@@ -3,14 +3,14 @@ const User = require('../models/user')
 
 exports.addUser = async (req, res, next) => {
 
-    const {name, track} = req.body
+    const {name} = req.body
 
     try {
-        if (!name || !track) {
+        if (!name) {
             return res.status(404).send({error: 'All fields are required'})
         }
         else {
-            const user = new User({name: name, track: track})
+            const user = new User({name: name})
             await user.save()
             res.status(200).send({message: 'user added successfully', user: user})
         }
@@ -55,12 +55,11 @@ exports.updateUser = async (req, res, next) => {
             return res.status(404).send({error: 'User not found'});
         }
 
-        const {name, track} = req.body;
-        if (!name || !track) {
+        const {name} = req.body;
+        if (!name) {
             return res.status(404).send({error: 'All fields are required'});
         }
         user.name = name;
-        user.track = track;
         await user.save();
 
         res.status(200).send({message: 'user updated successfully', user: user});
