@@ -17,7 +17,10 @@ mongoose.connect(process.env.MONGODB_URI, {useUnifiedTopology: true, useNewUrlPa
         next()
     })
 
-    app.use('/api', userRoutes)
+    // app.use('/api', userRoutes)
+    app.get('/api', (req, res, next) => {
+        res.send({message: 'I want to peform CRUD'})
+    })
 
     //listen for requests
     app.listen(process.env.PORT, () => {
