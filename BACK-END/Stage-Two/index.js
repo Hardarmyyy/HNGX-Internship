@@ -1,4 +1,5 @@
 require('dotenv').config()
+const cors = require('cors')
 const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
@@ -11,6 +12,8 @@ mongoose.connect(process.env.MONGODB_URI, {useUnifiedTopology: true, useNewUrlPa
 
     // Middlewares
     app.use(express.json())
+
+    app.use(cors())
 
     app.use((req, res, next) => {
         console.log(req.path, req.method) 
