@@ -1,0 +1,21 @@
+.cardContainer {
+    width: 100%;
+    position: relative;
+}
+
+.cardContainer img {
+    width: 100%;
+}
+
+.likeIcon {
+    color: crimson;
+}
+
+.unlikeIcon, .likeIcon {
+    font-size: 24px;
+    position: absolute;
+    color: crimson;
+    right: 2%;
+    top: 2%;
+    cursor: pointer;
+}

@@ -1,0 +1,35 @@
+.movieContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+    margin: 0px auto;
+    padding: 0px 60px;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 30px auto;
+    padding: 0px 60px;
+    font-size: 36px;
+}
+
+.title a {
+    text-decoration: none;
+    color: crimson;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+/* Media query for 425px */
+
+@media screen and (max-width: 425px) {
+    .movieContainer {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px auto;
+        padding: 0px 60px;
+    }
+}
