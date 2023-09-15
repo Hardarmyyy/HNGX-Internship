@@ -1,26 +1,29 @@
-.movieContainer {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    gap: 50px;
-    margin: 0px auto;
+.container {
     padding: 0px 60px;
 }
 
-.title {
+.featured {
     display: flex;
     justify-content: space-between;
     align-items: center;
     margin: 30px auto;
-    padding: 0px 60px;
-    font-size: 36px;
+    font-size: 32px;
 }
 
-.title a {
+.featured a {
     text-decoration: none;
     color: crimson;
     font-size: 18px;
     display: flex;
     align-items: center;
+}
+
+.movieContainer {
+    width: 100%;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 50px;
+    margin: 0px auto;
 }
 
 /* Media query for 425px */

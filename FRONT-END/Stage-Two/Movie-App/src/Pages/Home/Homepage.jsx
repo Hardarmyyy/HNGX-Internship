@@ -25,11 +25,11 @@ return (
 
         <Heading></Heading>
 
-        <Container fluid>
+        <Container fluid className='container'>
 
-            <div className='title'>
+            <div className='featured'>
 
-                <h2> Featured Movie </h2>
+                <h3> Featured Movie </h3>
                 
                 <Link> See more <BiChevronRight style={{fontSize: '24px'}}></BiChevronRight> </Link>
 

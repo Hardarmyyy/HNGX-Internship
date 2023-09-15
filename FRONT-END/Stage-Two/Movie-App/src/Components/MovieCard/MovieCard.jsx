@@ -39,11 +39,11 @@ return (
 
             <img src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`} alt={movie?.title} data-testid='movie-poster'/>
 
-            <p data-testid='movie-title'> {movie?.original_title} </p>
+            <p data-testid='movie-title' className='movie-title'> {movie?.original_title} </p>
 
-            <p data-testid='movie-release-date'> {movie?.release_date} </p>
+            <p data-testid='movie-release-date' className='movie-release-date'> Release date:  {movie?.release_date} </p>
 
-            <button onClick={() => {handleMovieDetails(movie.id)}}> Details </button>
+            <button onClick={() => {handleMovieDetails(movie.id)}}> view details </button>
 
         </div>
 
