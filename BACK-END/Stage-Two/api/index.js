@@ -4,7 +4,7 @@ const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
 
-const userRoutes = require('./routes/userRoutes')
+const userRoutes = require('../routes/userRoutes')
 
 //connect to database
 mongoose.connect(process.env.MONGODB_URI, {useUnifiedTopology: true, useNewUrlParser: true})  
