@@ -84,10 +84,10 @@ This objective of this project is to demonstrate how to use create RESTful APIs 
 
 # USAGE
 
-- curl -X GET http://localhost:3000/api/user_id
-- curl -X POST http://localhost:3000/api
-- curl -X PUT http://localhost:3000/api/user_id
-- curl -X DELETE http://localhost:3000/api/user_id
+- curl -X GET https://backend-stage-two.vercel.app/api/user_id
+- curl -X POST https://backend-stage-two.vercel.app/api
+- curl -X PUT https://backend-stage-two.vercel.app/api/user_id
+- curl -X DELETE https://backend-stage-two.vercel.app/api/user_id
 
 ## Author
 
