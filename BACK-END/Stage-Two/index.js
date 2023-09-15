@@ -3,11 +3,8 @@ const cors = require('cors')
 const express = require('express')
 const mongoose = require('mongoose')
 const app = express()
-const cron = require('node-cron')
-const axios = require('axios');
 
 const userRoutes = require('./routes/userRoutes')
-const serverUrl = 'https://backend-stage-two.vercel.app/api'
 
 //connect to database
 mongoose.connect(process.env.MONGODB_URI, {useUnifiedTopology: true, useNewUrlParser: true})  
@@ -22,16 +19,6 @@ mongoose.connect(process.env.MONGODB_URI, {useUnifiedTopology: true, useNewUrlPa
         console.log(req.path, req.method)  
         next()
     })
-
-    cron.schedule('* * * * *', async () => {
-        try {
-            // Send an HTTP GET request to server to keep it active
-            const response = await axios.get(serverUrl);
-            console.log(`Pinged ${serverUrl} at ${new Date().toLocaleTimeString()}`);
-        } catch (error) {
-            console.error(`Error pinging ${serverUrl}: ${error.message}`);
-        }
-    });
 
     app.use('/api', userRoutes)
 
