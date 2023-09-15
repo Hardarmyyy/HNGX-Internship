@@ -43,7 +43,7 @@ exports.getUser = async (req, res, next) => {
 }
 
 exports.test = async (req, res, next) => {
-    res.send({message: 'Hello world'})
+    return res.status(200).json({name: 'Hello World'})
 }
 
 exports.updateUser = async (req, res, next) => {
