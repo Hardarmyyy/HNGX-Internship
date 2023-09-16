@@ -37,13 +37,11 @@ return (
                 <AiOutlineHeart className='unlikeIcon' onClick={() => {handleUnLike(movie.id)}}></AiOutlineHeart>
             }
 
-            <img src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`} alt={movie?.title} data-testid='movie-poster'/>
+            <img onClick={() => {handleMovieDetails(movie.id)}} src={`https://image.tmdb.org/t/p/w500/${movie?.poster_path}`} alt={movie?.title} data-testid='movie-poster'/>
 
             <p data-testid='movie-title' className='movie-title'> {movie?.original_title} </p>
 
             <p data-testid='movie-release-date' className='movie-release-date'> Release date:  {movie?.release_date} </p>
-
-            <button onClick={() => {handleMovieDetails(movie.id)}}> view details </button>
 
         </div>
 

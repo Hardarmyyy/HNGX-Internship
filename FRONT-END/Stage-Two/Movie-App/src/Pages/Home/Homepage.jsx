@@ -4,9 +4,11 @@ import { myMovieContext } from '../../Context/MovieContext'
 import Container from 'react-bootstrap/Container';
 import MovieCard from '../../Components/MovieCard/MovieCard'
 import Heading from '../../Components/Header/Heading';
+import Footer from '../../Components/Footer/Footer';
 import { Link } from 'react-router-dom';
-import './Homepage.css'
 import { BiChevronRight } from "react-icons/bi";
+import './Homepage.css'
+
 
 
 const Homepage = () => {
@@ -15,8 +17,6 @@ const {initialState} = useContext(myMovieContext)
 
 const {movie, error} = initialState
 const orderedMovie = movie.slice(0,10)
-console.log(orderedMovie)
-console.log(error)
 
 return (
 
@@ -40,6 +40,8 @@ return (
             </div>
 
         </Container>
+
+        <Footer></Footer>
 
     </Container>
 </>

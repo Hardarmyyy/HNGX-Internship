@@ -1,6 +1,8 @@
 import React from 'react'
 import './Description.css'
 import Container from 'react-bootstrap/Container';
+import { BsPlayCircleFill } from "react-icons/bs";
+
 
 
 const Description = () => {
@@ -20,7 +22,7 @@ return (
 
         <p> John wick is on the run after killing a member of the international assassin's guild, and with a $14 million price tag on his head, he is the target of hitmen and women everywhere.</p>
 
-        <button> WATCH TRAILER </button>
+        <button> <BsPlayCircleFill className='playIcon'></BsPlayCircleFill> WATCH TRAILER </button>
 
     </Container>
 </>

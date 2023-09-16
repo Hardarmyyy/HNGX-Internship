@@ -1,6 +1,89 @@
 .description {
     position: absolute;
-    top: 20%;
+    top: 35%;
     color: #FFFFFF;
     width: 300px;
+}
+
+.description h2 {
+    font-size: 48px;
+    margin-bottom: 5px
+}
+
+.description p {
+    font-size: 16px;
+    margin: 5px 0px
+}
+
+.description button {
+    background: crimson;
+    color: #FFFFFF;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    margin: 10px 0px;
+    display: flex;
+    align-items: center;
+    cursor: pointer
+}
+
+.playIcon {
+    font-size: 18px;
+    margin-right: 10px
+}
+
+/* Media query for 768px */
+
+@media screen and (max-width: 768px) {
+    .description {
+        position: absolute;
+        top: 20%;
+        left: -3%;
+        width: 200px;
+    }
+    
+    .description h2 {
+        font-size: 32px;
+        margin-bottom: 5px
+    }
+}
+
+/* Media query for 425px */
+
+@media screen and (max-width: 425px) {
+    .description {
+        color: #FFFFFF;
+        width: 280px;
+    }
+    
+    .description h2 {
+        font-size: 24px;
+        margin-bottom: 5px
+    }
+
+    .description p {
+        font-size: 12px;
+        margin: 5px 0px
+    }
+
+    .description button {
+        padding: 5px 10px;
+        margin: 10px 0px;
+    }
+
+}
+
+/* Media query for 375px */
+
+@media screen and (max-width: 375px) {
+
+    .description h2 {
+        font-size: 22px;
+    }
+
+    .description button {
+        padding: 5px 10px;
+        margin: 5px 0px;
+    }
+
 }
