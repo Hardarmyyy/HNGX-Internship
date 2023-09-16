@@ -7,7 +7,6 @@ import Heading from '../../Components/Header/Heading';
 import Footer from '../../Components/Footer/Footer';
 import { Link } from 'react-router-dom';
 import { BiChevronRight } from "react-icons/bi";
-import './Homepage.css'
 
 
 
