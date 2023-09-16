@@ -33,8 +33,10 @@ return (
 
             </div>
 
+            {error && <p className='error'> {error} </p>}
+            
             <div className='movieContainer'>
-                <MovieCard movies={orderedMovie}></MovieCard>
+                {orderedMovie && <MovieCard movies={orderedMovie}></MovieCard> }
             </div>
 
         </Container>

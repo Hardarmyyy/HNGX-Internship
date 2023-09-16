@@ -1,0 +1,17 @@
+.videoContainer {
+    padding: 0px 40px;
+    margin-top: 40px;
+    height: 60%;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+iframe {
+    height: 100%;
+    margin-bottom: 20px;
+}
+
+.videoContainer span {
+    font-weight: bold;
+}

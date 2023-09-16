@@ -2,7 +2,8 @@ import React from 'react'
 import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 import axios from "axios";
-import Container from 'react-bootstrap/Container';
+import Container from 'react-bootstrap/Container'
+import './MovieDetails.css'
 
 const MovieDetails = () => {
 
@@ -31,21 +32,22 @@ const overView = movieDetails?.overview
 return (
 
 <>   
-    <Container>
+    <Container fluid className='videoContainer'>
         {movieDetails && 
             <>
-                <iframe title="Movie Trailer" src={`https://www.youtube.com/embed/${videos?.key}`}  allowFullScreen width='100%'></iframe> 
+                <iframe title="Movie Trailer" src={`https://www.youtube.com/embed/${videos?.key}`} frameborder="0" allowFullScreen width='100%'></iframe> 
 
-                <p data-testid='movie-title' className='title'> Title: {title} </p>
+                <p data-testid='movie-title' className='title'> <span> Title: </span> {title} </p>
 
-                <p data-testid='movie-release-date' className='release date'> Release date: {releaseDate} </p>
+                <p data-testid='movie-release-date' className='release date'> <span> Release date: </span> {releaseDate} </p>
 
-                <p data-testid='movie-runtime' className='runtime'> Runtime: {runTime} </p>
+                <p data-testid='movie-runtime' className='runtime'> <span> Runtime: </span> {runTime} mins </p>
 
-                <p data-testid='movie-overview' className='overView'> Overview: {overView} </p>
+                <p data-testid='movie-overview' className='overView'> <span> Overview: </span> {overView} </p>
             </>  
         }
     </Container>
+
 </>
 )
 }
