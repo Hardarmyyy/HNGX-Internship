@@ -30,6 +30,10 @@ This objective of this project is to demonstrate how to fetch data from an exter
 - Run the command below in your terminal to get all required files 
 - npm install
 
+### USAGE
+
+-url - <a> https://movie-app-gules-six.vercel.app/ </a>
+
 ## Author
 
 👤 **Adeyemo Adams**
