@@ -2,7 +2,7 @@ import React from 'react'
 import ReactDOM from 'react-dom/client'
 import App from './App.jsx'
 import './index.css'
-import Homepage from './Pages/Home/Homepage.jsx'
+import Homepage from './Pages/HomePage/Homepage.jsx'
 import MovieDetails from './Pages/MovieDetails/MovieDetails.jsx'
 
 import MovieContext from './Context/MovieContext.jsx'

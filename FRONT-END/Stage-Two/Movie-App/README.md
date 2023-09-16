@@ -1,4 +1,4 @@
-# HNG Internship - Stage - Two Backend project
+# HNG Internship - Stage - Two Frontend project
 
 This project demonstrates how to fetch data from an external API link.
 
@@ -18,7 +18,7 @@ This objective of this project is to demonstrate how to fetch data from an exter
 
 ### Prerequisites
 - Have a computer and internet connection
-- Have a general understanding of what RESTful API
+- Have a general understanding of what API is available
 - Have `visual-studio code` or any other code editor installed on your computer.
 
 ### Setup
@@ -29,11 +29,6 @@ This objective of this project is to demonstrate how to fetch data from an exter
 ### Install
 - Run the command below in your terminal to get all required files 
 - npm install
-
-# USAGE
-
-- url - 
-
 
 ## Author
 

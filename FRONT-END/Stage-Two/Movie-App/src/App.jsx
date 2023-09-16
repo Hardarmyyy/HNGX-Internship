@@ -1,4 +1,4 @@
-import Homepage from "./Pages/Home/Homepage"
+import Homepage from "./Pages/HomePage/Homepage"
 import { Outlet } from "react-router-dom"
 
 
