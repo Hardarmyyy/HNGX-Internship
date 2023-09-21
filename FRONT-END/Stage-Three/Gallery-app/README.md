@@ -14,11 +14,11 @@ This project demonstrates how to implement user login authentication using Auth0
 
 ## Introduction
 
-This objective of this project is to demonstrate how to authenticate user to have access to certain pages. The project also featured a drag and drop feature where images can be dragged from one position to another. 
+This objective of this project is to demonstrate how to authenticate user to have access to certain pages. The project also featured a drag and drop feature where images can be dragged from one position to another position. 
 
 ### Prerequisites
 - Have a computer and internet connection
-- Have a general understanding of what API is available
+- Have a general understanding of what authentication is about.
 - Have `visual-studio code` or any other code editor installed on your computer.
 
 ### Setup
