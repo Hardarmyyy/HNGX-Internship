@@ -23,7 +23,7 @@ This objective of this project is to demonstrate how to authenticate user to hav
 
 ### Setup
 - In order to get a copy of this project you need to download it from the link below.
-- <a> https://github.com/Hardarmyyy/HNGX-Internship/tree/main/FRONT-END/Stage-Two/Movie-App </a>
+- <a> https://github.com/Hardarmyyy/HNGX-Internship/tree/main/FRONT-END/Stage-Three/Gallery-app </a>
 - Extract the zipped file and open it in your code editor
 
 ### Install
@@ -32,7 +32,7 @@ This objective of this project is to demonstrate how to authenticate user to hav
 
 ### USAGE
 
--url - <a> https://movie-app-gules-six.vercel.app/ </a> 
+-url - <a> https://stage-three-auth-login.vercel.app/ </a> 
 
 ## Author
 
