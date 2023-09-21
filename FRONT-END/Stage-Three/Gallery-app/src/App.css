@@ -1,0 +1,11 @@
+.loginContainer {
+    text-align: center;
+    margin: 12rem auto;
+}
+
+.loading, .error {
+    text-align: center;
+    margin: 12rem auto;
+    font-size: 32px;
+    font-weight: bolder;
+}

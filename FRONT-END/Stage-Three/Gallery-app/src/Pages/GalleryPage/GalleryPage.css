@@ -1,0 +1,19 @@
+h1 {
+    text-align: center;
+    font-size: 32px;
+    margin: 40px auto;
+}
+
+.gridContainer {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 20px 20px;
+    padding: 0px 80px;
+    margin: 60px auto;
+}
+
+.gridContainer img {
+    width: 100%;
+    aspect-ratio: 1 / 0.95;
+}
+
