@@ -13,7 +13,7 @@ return (
     !isAuthenticated && 
 
     <div className='loginContainer'>
-        <h1> Auth0 Login </h1>
+        <h1> Gallery application </h1>
 
         <button onClick={() => loginWithRedirect()}> Login </button>
     </div>
