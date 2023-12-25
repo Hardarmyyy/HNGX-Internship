@@ -1,6 +1,11 @@
 const mongoose = require('mongoose')
 const User = require('../models/user')
 
+exports.test = async (req, res) => {
+
+    res.json({message: "TESTING 123 ...................."})
+}
+
 exports.addUser = async (req, res, next) => {
 
     const {name} = req.body

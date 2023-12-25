@@ -35,7 +35,8 @@ mongoose.connect(process.env.MONGODB_URI, {useUnifiedTopology: true, useNewUrlPa
         }
     });
 
-    app.use('/api/v1', userRoutes)
+
+    app.use('/api', userRoutes)
 
     //listen for requests
     app.listen(process.env.PORT, () => {
