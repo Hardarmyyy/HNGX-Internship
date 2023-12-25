@@ -24,7 +24,7 @@ mongoose.connect(process.env.MONGODB_URI, {useUnifiedTopology: true, useNewUrlPa
     })
 
     // define cron job to keep server up and running
-    const serverUrl = 'https://backend-stage-two.vercel.app/api'
+    const serverUrl = 'https://stage-two-cronjob.vercel.app'
     cron.schedule('*/2 * * * *', async () => {
         try {
             // Send an HTTP GET request to server to keep it active
