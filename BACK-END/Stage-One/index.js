@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 require('dotenv').config()
+const cron = require('node-cron')
+const axios = require('axios');
 
 app.use(express.json()) 
 
@@ -8,6 +10,18 @@ app.use((req, res, next) => {
     console.log(req.path, req.method)
     next()
 })
+
+// define cron job to keep server up and running
+const serverUrl = 'https://stage-one-tan.vercel.app'
+cron.schedule('*/2 * * * *', async () => {
+    try {
+        // Send an HTTP GET request to server to keep it active
+        const response = await axios.get(serverUrl);
+        console.log(`Pinged ${serverUrl} at ${new Date().toLocaleTimeString()}`);
+    } catch (error) {
+        console.error(`Error pinging ${serverUrl}: ${error.message}`);
+    }
+});
 
 
 app.get('/api', (req, res) => {
