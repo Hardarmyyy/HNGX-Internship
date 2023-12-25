@@ -42,10 +42,6 @@ exports.getUser = async (req, res, next) => {
 
 }
 
-exports.test = async (req, res, next) => {
-    return res.status(200).json({name: 'Hello World'})
-}
-
 exports.updateUser = async (req, res, next) => {
         const {user_id} = req.params
 
