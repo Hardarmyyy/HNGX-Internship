@@ -1,0 +1,45 @@
+version: "3.7"
+
+services:
+
+  # Server
+  server:
+    build:
+      context: . # This specifies the directory where the server dockerfile will be running
+      dockerfile: Dockerfile
+    image: hardarmyyy/backend
+    container_name: server-container
+    restart: always
+    networks:
+      - app-network
+    # env_file:
+    #   - .env.production # ensure to point the path to the env file
+    # ports: 
+    #   - 4000:4000  # container will be exposed to the outside on this port
+    environment:
+      - PORT=3070
+      - MONGODB_URI=mongodb+srv://adeyemoadams005:KePkXn5CwIj8VYk0@person.jckefrv.mongodb.net/?retryWrites=true&w=majority # EX. "VAR_NAME=value"
+    depends_on:
+      - mongo
+    volumes:
+      - server-data:/usr/src/app/data  # Mount a volume for persisting data on the server 
+
+
+  # MongoDB
+  mongo:
+    image: mongo:latest
+    container_name: database-container
+    restart: always
+    networks:
+      - app-network
+    volumes:
+      - mongo:/data/db  # # Mount a volume for persisting data on the db
+
+networks:
+  app-network:
+    driver: bridge
+
+volumes:
+  mongo: {}
+  server-data: {}
+
