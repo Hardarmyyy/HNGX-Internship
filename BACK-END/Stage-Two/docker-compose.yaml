@@ -12,13 +12,13 @@ services:
     restart: always
     networks:
       - app-network
-    # env_file:
-    #   - .env.production # ensure to point the path to the env file
-    # ports: 
-    #   - 4000:4000  # container will be exposed to the outside on this port
+    env_file:
+      - .env.production # ensure to point the path to the env file
+    ports: 
+      - "${PORT}:${PORT}"  # container will be exposed to the outside on this port
     environment:
-      - PORT=3070
-      - MONGODB_URI=mongodb+srv://adeyemoadams005:KePkXn5CwIj8VYk0@person.jckefrv.mongodb.net/?retryWrites=true&w=majority # EX. "VAR_NAME=value"
+      - "PORT=${PORT}"
+      - "MONGODB_URI=${MONGODB_URI}" # EX. "VAR_NAME=value"
     depends_on:
       - mongo
     volumes:

@@ -10,14 +10,19 @@ COPY package*.json ./
 # Install app dependencies
 RUN npm install
 
+RUN npm install pm2 -g
+
 # Copy only the necessary files, excluding the 'node_modules' directory
 COPY . .
 
+# Set environment variable for data persistence
+ENV PORT=${PORT}
+
 # Make port available to the world outside this container
-EXPOSE 3070
+EXPOSE $PORT
 
 # Run the command
-CMD ["npm", "run", "start"]
+CMD ["pm2-runtime", "ecosystem.config.js"]
 
 
 
